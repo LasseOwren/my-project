@@ -1,13 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import LugarEllerBord from './pages/LugarEllerBord';
+import SkrivBordNr from './pages/SkrivBordNr';
+import SkrivLugarNr from './pages/SkrivLugarNr';
+import Menu from './pages/Menu';
 
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">
-        Hello, Tailwind CSS!
-      </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/lugar-eller-bord" element={<LugarEllerBord />} />
+        <Route path="/skriv-bordnr" element={<SkrivBordNr />} />
+        <Route path="/skriv-lugarnr" element={<SkrivLugarNr />} />
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+    </Router>
   );
 }
 
