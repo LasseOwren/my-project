@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 
+// Komponent for å velge om maten skal leveres til lugar eller bord
 const LugarEllerBord = () => {
   const navigate = useNavigate();
 

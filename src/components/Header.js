@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import CabinContext from '../components/CabinContext';
 
+
+// Header-komponenten som viser logoen og kabin- eller bordnummeret
 function Header() {
   const { cabinOrTable } = useContext(CabinContext);
 

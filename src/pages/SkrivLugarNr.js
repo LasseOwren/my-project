@@ -3,11 +3,15 @@ import Header from '../components/Header';
 import { useNavigate } from 'react-router-dom';
 import CabinContext from '../components/CabinContext';
 
+
+
+// Komponent for å skrive inn lugarnummer
 const SkrivLugarNr = () => {
   const [lugarNr, setLugarNr] = useState('');
   const { setCabinOrTable } = useContext(CabinContext);
   const navigate = useNavigate();
 
+  // Funksjon for å sette lugarnummeret og navigere til menyen
   const handleNext = () => {
     setCabinOrTable(`Cabin ${lugarNr}`);
     navigate('/menu');

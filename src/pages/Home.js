@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
+// Hjemmeside-komponenten som viser en velkomstmelding og to navigasjonsknapper
 const Home = () => {
   const navigate = useNavigate();
 
