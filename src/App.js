@@ -5,6 +5,7 @@ import LugarEllerBord from './pages/LugarEllerBord';
 import SkrivBordNr from './pages/SkrivBordNr';
 import SkrivLugarNr from './pages/SkrivLugarNr';
 import Menu from './pages/Menu';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/skriv-bordnr" element={<SkrivBordNr />} />
         <Route path="/skriv-lugarnr" element={<SkrivLugarNr />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
     </Router>
   );
