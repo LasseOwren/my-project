@@ -6,6 +6,7 @@ import SkrivBordNr from './pages/SkrivBordNr';
 import SkrivLugarNr from './pages/SkrivLugarNr';
 import Menu from './pages/Menu';
 import ProductPage from './pages/ProductPage';
+import GodkjentBetaling from './pages/GodkjentBetaling';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/skriv-lugarnr" element={<SkrivLugarNr />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/GodkjentBetaling" element={<GodkjentBetaling />} />
       </Routes>
     </Router>
   );
