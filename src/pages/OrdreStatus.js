@@ -1,14 +1,26 @@
 import React from 'react';
 import Header from '../components/Header';
 import { useCart } from '../components/CartContext';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const OrdreStatus = () => {
     const { cart, getTotalPrice } = useCart();
+    const navigate = useNavigate();
+
+    const calculateEstimatedTime = () => {
+        let totalItems = 0;
+        cart.forEach(item => {
+            totalItems += item.quantity;
+        });
+        return totalItems * 5; // With this logic it add 5 minutes per product
+    };
 
     return (
         <div className="min-h-screen flex flex-col bg-white">
             <Header />
-            <div className="p-8">
+            <div className="p-8 flex-grow">
                 <h1 className="text-3xl font-bold text-center mb-12">Ordre Status</h1>
                 <div className="flex justify-center items-center mb-12">
                     <div className="flex flex-col items-center mx-4">
@@ -26,7 +38,7 @@ const OrdreStatus = () => {
                         <span>Ferdig</span>
                     </div>
                 </div>
-                <p className="text-center mb-12">Estimert tid: 15 minutter</p>
+                <p className="text-center mb-12">Estimert tid: {calculateEstimatedTime()} minutter</p>
                 <div className="border-t border-b border-gray-300 py-8">
                     <div className="flex justify-between mb-6">
                         <span className="font-bold">Produkt</span>
@@ -43,6 +55,14 @@ const OrdreStatus = () => {
                         <span className="font-bold">{getTotalPrice()} kr</span>
                     </div>
                 </div>
+            </div>
+            <div className="flex justify-center mb-4">
+                <FontAwesomeIcon
+                    icon={faHome}
+                    className="cursor-pointer text-black"
+                    size="2x"
+                    onClick={() => navigate('/')}
+                />
             </div>
         </div>
     );
