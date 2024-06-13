@@ -53,6 +53,7 @@ const CartPage = () => {
                     <label className="block text-gray-700 mb-2" htmlFor="discount-code">
                         Legg til rabattkode:
                     </label>
+                    <p className="text-sm text-gray-500 mb-2">Hint: "sommerbonus" for 10%</p>
                     <input
                         type="text"
                         id="discount-code"
