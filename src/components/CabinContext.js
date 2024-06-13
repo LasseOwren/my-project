@@ -7,8 +7,12 @@ const CabinContext = createContext();
 export const CabinProvider = ({ children }) => {
   const [cabinOrTable, setCabinOrTable] = useState('');
 
+  const resetCabinOrTable = () => {
+    setCabinOrTable('');
+  };
+
   return (
-    <CabinContext.Provider value={{ cabinOrTable, setCabinOrTable }}>
+    <CabinContext.Provider value={{ cabinOrTable, setCabinOrTable, resetCabinOrTable }}>
       {children}
     </CabinContext.Provider>
   );
