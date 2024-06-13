@@ -7,7 +7,7 @@ import { useCart } from '../components/CartContext';
 
 const GodkjentBetaling = () => {
     const navigate = useNavigate();
-    const { cart, getTotalPrice } = useCart();
+    const { getTotalPrice, couponApplied, getDiscountAmount } = useCart();
 
     return (
         <div className="min-h-screen flex flex-col bg-white">
@@ -20,10 +20,16 @@ const GodkjentBetaling = () => {
                         <p className="text-2xl font-bold">Total</p>
                         <hr className="border-t-2 border-gray-300 my-4" />
                         <p className="text-4xl font-bold">{getTotalPrice()} kr</p>
+                        {couponApplied && (
+                            <div className="flex justify-between">
+                                <span className="text-green-500">Rabatt</span>
+                                <span className="text-green-500">-{getDiscountAmount()} NOK</span>
+                            </div>
+                        )}
                         <hr className="border-t-2 border-gray-300 my-4" />
                     </div>
                     <p className="text-base">
-                        Klikk her for å se <span className="font-bold" onClick={() => navigate('/ordre-status')}>ordre status</span>
+                        Klikk her for å se <span className="font-bold cursor-pointer" onClick={() => navigate('/ordre-status')}>ordre status</span>
                     </p>
                 </div>
             </div>
