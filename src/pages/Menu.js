@@ -6,10 +6,13 @@ import Header from '../components/Header';
 import { products } from '../Data/Products';
 import CartBanner from '../components/CartBanner';
 
+
+// Component for the menu page
 const Menu = () => {
     const [category, setCategory] = useState('Mat');
     const navigate = useNavigate();
 
+    // Function to render product cards
     const renderProducts = (items) => {
         if (!Array.isArray(items)) {
             return <div>No products available</div>;

@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Background from '../components/Background';
 
+
+// Component for the home page
 const Home = () => {
   const navigate = useNavigate();
 
@@ -10,8 +12,8 @@ const Home = () => {
     <Background image="fjordline3.jpg">
       <Header />
       <div className="relative flex-grow">
-        <div className="absolute inset-0 bg-black opacity-65 z-0"></div> {/* Increased opacity */}
-        <div className="relative z-10 p-4 md:p-8 flex flex-col justify-start items-center pt-4 md:pt-8 lg:pt-10 xl:pt-12"> {/* Adjusted padding */}
+        <div className="absolute inset-0 bg-black opacity-65 z-0"></div> 
+        <div className="relative z-10 p-4 md:p-8 flex flex-col justify-start items-center pt-4 md:pt-8 lg:pt-10 xl:pt-12"> 
           <div className="max-w-lg mx-auto bg-transparent p-6 text-white text-center">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">Velkommen til Fjordline</h1>
             <hr className="border-t-2 border-gray-300 my-4" />
