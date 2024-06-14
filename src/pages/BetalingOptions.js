@@ -4,11 +4,14 @@ import Header from "../components/Header";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReply } from '@fortawesome/free-solid-svg-icons';
 
+
+// Component for selecting payment options
 const BetalingOptions = () => {
     const navigate = useNavigate();
-
+    
+    // Function to handle payment option selection
     const handlePaymentOption = () => {
-        navigate('/godkjent-betaling');
+        navigate('/godkjent-betaling'); // Navigate to payment approval page
     };
 
     return (
@@ -25,24 +28,24 @@ const BetalingOptions = () => {
                 <div className="max-w-lg mx-auto text-center w-full px-4">
                     <h1 className="text-3xl md:text-4xl font-bold mb-8">Velg betalingsmåte:</h1>
                     <hr className="border-t-2 border-gray-300 mb-6" />
-                    <div className="my-6 space-y-8"> {/* Increased vertical spacing */}
+                    <div className="my-6 space-y-8"> 
                         <button 
                             onClick={handlePaymentOption} 
                             className="bg-white border border-gray-300 py-8 rounded-full hover:bg-gray-100 w-full flex items-center justify-center"
                         >
-                            <img src="/strex.png" alt="Strex" className="h-16" /> {/* Increased image size */}
+                            <img src="/strex.png" alt="Strex" className="h-16" /> 
                         </button>
                         <button 
                             onClick={handlePaymentOption} 
                             className="bg-white border border-gray-300 py-8 rounded-full hover:bg-gray-100 w-full flex items-center justify-center"
                         >
-                            <img src="/Mastercard-logo.svg.png" alt="Mastercard" className="h-16" /> {/* Increased image size */}
+                            <img src="/Mastercard-logo.svg.png" alt="Mastercard" className="h-16" /> 
                         </button>
                         <button 
                             onClick={handlePaymentOption} 
                             className="bg-white border border-gray-300 py-8 rounded-full hover:bg-gray-100 w-full flex items-center justify-center"
                         >
-                            <img src="/vipps.png" alt="Vipps" className="h-16" /> {/* Increased image size */}
+                            <img src="/vipps.png" alt="Vipps" className="h-16" /> 
                         </button>
                     </div>
                 </div>

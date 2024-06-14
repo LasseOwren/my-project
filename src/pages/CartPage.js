@@ -5,13 +5,16 @@ import { faReply } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
+
+// Component for the cart page
 const CartPage = () => {
-    const { cart, removeFromCart, updateQuantity, getTotalPrice, applyCoupon, couponApplied, getDiscountAmount } = useCart();
+    const { cart, removeFromCart, updateQuantity, getTotalPrice, applyCoupon, couponApplied, getDiscountAmount } = useCart();  // Get cart context values
     const navigate = useNavigate();
     const [couponCode, setCouponCode] = useState('');
-
+   
+    // Function to handle coupon application
     const handleApplyCoupon = () => {
-        applyCoupon(couponCode);
+        applyCoupon(couponCode);  // Apply the entered coupon code
     };
 
     return (
