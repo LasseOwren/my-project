@@ -8,12 +8,15 @@ import { faReply } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from '../components/CartContext';
 import CartBanner from '../components/CartBanner';
 
+
+// Component for the product detail page
 const ProductPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const { cabinOrTable } = useContext(CabinContext);
     const { addToCart } = useCart();
 
+    // Function to find product by id
     function findProductById(id) {
         for (let category in products) {
             for (let subcategory in products[category]) {
@@ -31,7 +34,7 @@ const ProductPage = () => {
     if (!product) return <div>Product not found</div>;
 
     const renderOptions = () => {
-        // Your existing renderOptions logic
+       
     };
 
     return (

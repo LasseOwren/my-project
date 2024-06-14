@@ -6,11 +6,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReply } from '@fortawesome/free-solid-svg-icons';
 import CabinContext from '../components/CabinContext';
 
+
+// Component for entering table number
 const SkrivBordNr = () => {
-  const [bordNr, setBordNr] = useState('');
-  const { setCabinOrTable } = useContext(CabinContext);
+  const [bordNr, setBordNr] = useState(''); // State to manage the table number input
+  const { setCabinOrTable } = useContext(CabinContext); // Get function to set cabin or table context
   const navigate = useNavigate();
 
+
+  // Function to handle navigation to menu page
   const handleNext = () => {
     setCabinOrTable(`Bord ${bordNr}`);
     navigate('/menu');
@@ -20,8 +24,8 @@ const SkrivBordNr = () => {
     <Background image="fjordline3.jpg">
       <Header />
       <div className="relative flex-grow">
-        <div className="absolute inset-0 bg-black opacity-65 z-0"></div> {/* Adjusted overlay opacity */}
-        <div className="relative z-10 p-4 md:p-8 flex flex-col justify-start items-center pt-4 md:pt-8 lg:pt-10 xl:pt-12"> {/* Adjusted padding */}
+        <div className="absolute inset-0 bg-black opacity-65 z-0"></div> 
+        <div className="relative z-10 p-4 md:p-8 flex flex-col justify-start items-center pt-4 md:pt-8 lg:pt-10 xl:pt-12"> 
           <FontAwesomeIcon
             icon={faReply}
             className="absolute left-0 top-0 m-4 cursor-pointer text-white"
