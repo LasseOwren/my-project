@@ -22,7 +22,7 @@ const OrdreStatus = () => {
         cart.forEach(item => {
             totalItems += item.quantity;
         });
-        return totalItems * 5; // With this logic it add 5 minutes per product
+        return totalItems * 5; // With this logic it adds 5 minutes per product
     };
 
     return (
