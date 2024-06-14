@@ -7,7 +7,8 @@ import { useCart } from '../components/CartContext';
 
 const GodkjentBetaling = () => {
     const navigate = useNavigate();
-    const { getTotalPrice, couponApplied, getDiscountAmount } = useCart();
+    const { getTotalPrice, couponApplied, getDiscountAmount } = useCart(); // Get cart context values
+
 
     return (
         <div className="min-h-screen flex flex-col bg-white">
