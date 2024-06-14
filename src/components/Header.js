@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CabinContext from '../components/CabinContext';
 
-// Header-komponenten som viser logoen og kabin- eller bordnummeret
+// Header component that shows logo and cabin or table number
 function Header() {
   const { cabinOrTable } = useContext(CabinContext);
   const navigate = useNavigate();

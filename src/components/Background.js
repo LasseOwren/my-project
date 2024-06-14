@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// The Background component takes in 'image' and 'children' as props.
 const Background = ({ image, children }) => {
   return (
     <div
@@ -17,6 +18,7 @@ const Background = ({ image, children }) => {
   );
 };
 
+// Specifies the type of props expected by the Background component.
 Background.propTypes = {
   image: PropTypes.string.isRequired,
   children: PropTypes.node,

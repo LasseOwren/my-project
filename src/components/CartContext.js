@@ -1,15 +1,20 @@
 import React, { createContext, useState, useContext } from 'react';
 
+// Create a context for the cart
 const CartContext = createContext();
 
+// Custom hook to use the CartContext
 export const useCart = () => {
     return useContext(CartContext);
 };
 
+
+// Provider component to wrap the app and provide cart state
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [couponApplied, setCouponApplied] = useState(false);
 
+    // Function to add a product to the cart
     const addToCart = (product) => {
         setCart((prevCart) => {
             const existingProduct = prevCart.find(item => item.id === product.id);

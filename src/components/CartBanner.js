@@ -2,7 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../components/CartContext';
 
+// The CartBanner component displays a banner with cart information and a link to the cart page.
 const CartBanner = () => {
+    // Retrieves functions from the cart context to get total items and total price.
     const { getTotalItems, getTotalPrice } = useCart();
     const navigate = useNavigate();
 

@@ -1,9 +1,9 @@
 import React, { createContext, useState } from 'react';
 
-// Oppretter konteksten for å dele kabin- eller bordnummer
+// The CartBanner component displays a banner with cart information and a link to the cart page.
 const CabinContext = createContext();
 
-// Oppretter en provider for konteksten
+// Creates a provider for the context
 export const CabinProvider = ({ children }) => {
   const [cabinOrTable, setCabinOrTable] = useState('');
 
